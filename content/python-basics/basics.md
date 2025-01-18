@@ -1,6 +1,6 @@
 ---
 title: Basics
-date: 2025-01-17
+date: 2025-01-18
 author: Your Name
 cell_count: 5
 score: 5
