@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/21.html"><h3 class="article-title">2.1</h3></a>
-<h6 class="subheader" title="2025-01-18T00:00:00-05:00">Sat 18 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -82,7 +82,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/22.html"><h3 class="article-title">2.2</h3></a>
-<h6 class="subheader" title="2025-01-18T00:00:00-05:00">Sat 18 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -136,8 +136,123 @@ False
 
 
             <article>
+                <a href="https://Arnald-R.github.io/pyynotes/23.html"><h3 class="article-title">2.3</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#identifiers</span>
+<span class="n">we</span> <span class="n">cannot</span> <span class="n">use</span> <span class="n">the</span> <span class="n">keywords</span> <span class="k">as</span> <span class="n">identifiers</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="err">= 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">class</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>  Cell In[5], line 1
+    class = 10
+          ^
+SyntaxError: invalid syntax
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">class_</span> <span class="o">=</span> <span class="s2">&quot;RSVM&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">class_</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>RSVM
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Identifier may not include special symbols like !, @, #, $, % </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">schoola</span><span class="o">@</span> <span class="o">=</span> <span class="s2">&quot;mbhss&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">school</span><span class="o">@</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>  Cell In[4], line 1
+    schoola@ = &quot;mbhss&quot;
+             ^
+SyntaxError: invalid syntax
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5 …</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/23.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/24.html"><h3 class="article-title">2.4</h3></a>
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="o">=</span><span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#string literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">singlt_line_string</span> <span class="o">=</span> <span class="s1">&#39;asdf&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">singlt_line_string</span> <span class="p">)</span>
+<span class="n">multi_line_string</span> <span class="o">=</span> <span class="s1">&#39;hi</span><span class="se">\</span>
+<span class="s1">dear friend</span><span class="se">\</span>
+<span class="s1">how are you&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">multi_line_string</span> <span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>asdf
+hidear friendhow are you
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#integer literals</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mo">0o34</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mh">0x34</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decimal representation &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decimal representation &quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Decimal representation &quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> 
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Decimal representation  40
+Decimal …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/24.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://Arnald-R.github.io/pyynotes/basics.html"><h3 class="article-title">Basics</h3></a>
-<h6 class="subheader" title="2025-01-18T00:00:00-05:00">Sat 18 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
@@ -176,7 +291,7 @@ False
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/tokens.html"><h3 class="article-title">Tokens</h3></a>
-<h6 class="subheader" title="2025-01-18T00:00:00-05:00">Sat 18 January 2025
+<h6 class="subheader" title="2025-01-20T00:00:00-05:00">Mon 20 January 2025
 </h6>
 
 
