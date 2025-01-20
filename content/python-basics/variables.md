@@ -2,7 +2,7 @@
 title: Variables
 date: 2025-01-20
 author: Your Name
-cell_count: 12
+cell_count: 13
 score: 10
 ---
 
@@ -98,6 +98,20 @@ print(type(num))
 ```
 
     <class 'float'>
+
+
+
+```python
+fruit1, fruit2, fruit3 = "Banana", "Orange", "Mango"
+print(fruit1)
+print(fruit2)
+print(fruit3)
+
+```
+
+    Banana
+    Orange
+    Mango
 
 
 
