@@ -1,10 +1,21 @@
 ---
-title: 2.2
+title: Reserved Keywords
 date: 2025-01-20
 author: Your Name
-cell_count: 43
-score: 40
+cell_count: 45
+score: 45
 ---
+
+```python
+#created at 20250118
+```
+
+
+```python
+https://www.scientecheasy.com/2022/09/reserved-keywords-in-python.html/
+
+```
+
 
 ```python
 #Reserved keywords
@@ -496,4 +507,4 @@ assert x < 10, "x is not less than 10"
 
 
 ---
-**Score: 40**
+**Score: 45**

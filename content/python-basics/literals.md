@@ -1,10 +1,20 @@
 ---
-title: 2.4
+title: Literals
 date: 2025-01-20
 author: Your Name
-cell_count: 22
+cell_count: 24
 score: 20
 ---
+
+```python
+#created at 20250120
+```
+
+
+```python
+https://www.scientecheasy.com/2022/09/literals-in-python.html/
+```
+
 
 ```python
 #literals

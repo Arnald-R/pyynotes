@@ -1,10 +1,21 @@
 ---
-title: 2.3
+title: Identifiers
 date: 2025-01-20
 author: Your Name
-cell_count: 6
+cell_count: 8
 score: 5
 ---
+
+```python
+#createdat 20250120
+```
+
+
+```python
+https://www.scientecheasy.com/2022/09/identifiers-in-python.html/
+
+```
+
 
 ```python
 #identifiers
