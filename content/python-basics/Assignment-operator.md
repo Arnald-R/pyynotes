@@ -1,6 +1,6 @@
 ---
 title: Assignment-Operator
-date: 2025-01-22
+date: 2025-01-23
 author: Your Name
 cell_count: 11
 score: 10

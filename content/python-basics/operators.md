@@ -1,6 +1,6 @@
 ---
 title: Operators
-date: 2025-01-22
+date: 2025-01-23
 author: Your Name
 cell_count: 21
 score: 20
