@@ -1,6 +1,6 @@
 ---
 title: Memory-Manage
-date: 2025-01-23
+date: 2025-01-24
 author: Your Name
 cell_count: 4
 score: 0
