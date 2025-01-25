@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Nestedloop1</title>
+
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/pygments.css" />	
+    <script src="https://Arnald-R.github.io/pyynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://Arnald-R.github.io/pyynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://Arnald-R.github.io/pyynotes/nestedloop1.html" rel="bookmark"
+        title="Permalink to Nestedloop1">Nestedloop1</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-01-25T00:00:00-05:00">Sat 25 January 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#created at 20250125</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="n">nested</span><span class="o">-</span><span class="n">loops</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value of i in: &quot;</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;value of j in: &quot;</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nested loop ends here&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">1</span>
+<span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">1</span>
+<span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">2</span>
+<span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">2</span>
+<span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">1</span>
+<span class="nv">value</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">j</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">2</span>
+<span class="nv">nested</span><span class="w"> </span><span class="k">loop</span><span class="w"> </span><span class="nv">ends</span><span class="w"> </span><span class="nv">here</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x value in: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y value in: &quot;</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nested while ends here&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nv">x</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">3</span>
+<span class="nv">y</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">5</span>
+<span class="nv">y</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">6</span>
+<span class="nv">y</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">7</span>
+<span class="nv">y</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">8</span>
+<span class="nv">y</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">9</span>
+<span class="nv">x</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">in</span>:<span class="w">  </span><span class="mi">4</span>
+<span class="nv">nested</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nv">ends</span><span class="w"> </span><span class="nv">here</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;math table of &#39;6&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>math table of &#39;6&#39;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span>  <span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span> <span class="p">,</span> <span class="mi">11</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span> <span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span><span class="s1">&#39; = &#39;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loop ended&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">6</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">12</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">18</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">24</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">30</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">36</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">42</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">48</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">54</span>
+<span class="mf">6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mf">60</span>
+
+<span class="n">loop</span><span class="w"> </span><span class="kr">end</span><span class="n">ed</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">x</span> <span class="o">&lt;=</span><span class="mi">5</span> <span class="p">:</span>
+    <span class="n">tot</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">()</span>
+    <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">tot</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+        <span class="nb">print</span><span class="p">(</span> <span class="n">x</span> <span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="p">,</span><span class="s1">&#39;=&#39;</span> <span class="p">,</span><span class="n">tot</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">+</span><span class="mi">1</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; nested loop winded up&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">27</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span>
+
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">28</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">36</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span>
+
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">35</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">45</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span>
+<span class="w"> </span><span class="n">nested</span><span class="w"> </span><span class="n">loop</span><span class="w"> </span><span class="n">winded</span><span class="w"> </span><span class="n">up</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tables from 1 - 5&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>tables from 1 - 5
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
+        <span class="n">tot</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">j</span> <span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">tot</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span>
+<span class="mf">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span>
+<span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">21</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">27</span>
+<span class="mf">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span>
+
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">16</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">24</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">28</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">36</span>
+<span class="mf">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span>
+
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">30</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">35</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">45</span>
+<span class="mf">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">50</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;triangle of *&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>triangle of *
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">*</span>
+**
+***
+****
+*****
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;truangle of numbers:&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>truangle of numbers:
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="w">  </span>
+<span class="mf">1</span><span class="w">  </span><span class="mf">2</span><span class="w">  </span>
+<span class="mf">1</span><span class="w">  </span><span class="mf">2</span><span class="w">  </span><span class="mf">3</span><span class="w">  </span>
+<span class="mf">1</span><span class="w">  </span><span class="mf">2</span><span class="w">  </span><span class="mf">3</span><span class="w">  </span><span class="mf">4</span><span class="w">  </span>
+<span class="mf">1</span><span class="w">  </span><span class="mf">2</span><span class="w">  </span><span class="mf">3</span><span class="w">  </span><span class="mf">4</span><span class="w">  </span><span class="mf">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p>
+<p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/archives.html">Archives</a>
+            <li><a href="https://Arnald-R.github.io/pyynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/Arnald-R/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Arnald</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 title: Global-Variable
-date: 2025-01-24
+date: 2025-01-25
 author: Your Name
 cell_count: 12
 score: 10
