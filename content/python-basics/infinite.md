@@ -1,6 +1,6 @@
 ---
 title: Infinite
-date: 2025-01-25
+date: 2025-01-30
 author: Your Name
 cell_count: 8
 score: 5
