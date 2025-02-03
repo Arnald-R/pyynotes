@@ -1,6 +1,6 @@
 ---
 title: Membership-Operator1
-date: 2025-01-30
+date: 2025-02-03
 author: Your Name
 cell_count: 22
 score: 20
