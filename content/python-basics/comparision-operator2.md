@@ -1,6 +1,6 @@
 ---
 title: Comparision-Operator2
-date: 2025-02-03
+date: 2025-02-04
 author: Your Name
 cell_count: 16
 score: 15

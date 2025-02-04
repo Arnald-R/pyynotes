@@ -1,6 +1,6 @@
 ---
-title: Variables
-date: 2025-02-03
+title: Json2
+date: 2025-02-04
 author: Your Name
 cell_count: 13
 score: 10

@@ -1,6 +1,6 @@
 ---
 title: Logical-Operator3
-date: 2025-02-03
+date: 2025-02-04
 author: Your Name
 cell_count: 25
 score: 25

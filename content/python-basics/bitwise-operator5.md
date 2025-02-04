@@ -1,6 +1,6 @@
 ---
 title: Bitwise-Operator5
-date: 2025-02-03
+date: 2025-02-04
 author: Your Name
 cell_count: 13
 score: 10
