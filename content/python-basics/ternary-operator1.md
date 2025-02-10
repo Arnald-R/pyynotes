@@ -1,6 +1,6 @@
 ---
 title: Ternary-Operator1
-date: 2025-02-05
+date: 2025-02-10
 author: Your Name
 cell_count: 26
 score: 25

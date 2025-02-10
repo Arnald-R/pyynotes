@@ -1,11 +1,14 @@
 ---
 title: Untitled
-date: 2025-02-05
+date: 2025-02-10
 author: Your Name
-cell_count: 0
+cell_count: 1
 score: 0
 ---
 
+```python
+
+```
 
 
 ---
