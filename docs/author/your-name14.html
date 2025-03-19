@@ -47,22 +47,132 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/untitled2.html"><h3 class="article-title">Untitled2</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-6306.html"><h3 class="article-title">Ex-7-6306</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250315</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/14.-custom-exceptions</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#custom Exception with repr method</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">NegativeNumberError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="n">number</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Negative number is not allowed : </span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;NegativeNumberError(</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">number</span><span class="si">!r}</span><span class="s2">)&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">process_number …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-6306.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-7415.html"><h3 class="article-title">Ex-7-7415</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250308</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/2.-asynchronous-programming</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Asynchronous File I/O wit aiofiles</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">aiofiles</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">write_to_file</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;example.txt&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">await</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello,async file I/O!</span><span class="se">\n</span><span class="s2">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>  Cell In[5], line 3
+    await f.write …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-7415.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-7846.html"><h3 class="article-title">Ex-7-7846</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250312</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/5.-abstract-base-classes-abcs</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Connecting Abstract Base class with interfaces</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Flyable</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Bird</span><span class="p">(</span><span class="n">Flyable</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fly</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bird is flying&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">bird</span> <span class="o">=</span> <span class="n">Bird</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">bird</span><span class="o">.</span><span class="n">fly</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Bird is flying
+</code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/untitled2.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-7846.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -70,34 +180,94 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/untitled2-3501.html"><h3 class="article-title">Untitled2-3501</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-7865.html"><h3 class="article-title">Ex-7-7865</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250307</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">8.</span><span class="o">-</span><span class="n">coroutines</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/1.-typing-module</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#using tuple for fixed sequences</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tuple</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">coordinates</span><span class="p">(</span><span class="n">coords</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span><span class="nb">float</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;latitude :</span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> , longitude : </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">coordinates</span><span class="p">((</span><span class="mf">40.7128</span><span class="p">,</span><span class="o">-</span><span class="mf">74.0060</span><span class="p">)))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">latitude</span><span class="w"> </span><span class="o">:</span><span class="mf">40.7128</span><span class="w"> </span><span class="o">,</span><span class="w"> </span><span class="n">longitude</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mf">74.006</span>
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-7865.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-7887.html"><h3 class="article-title">Ex-7-7887</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">work</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;search&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;User(name = &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span><span class="s2">&quot;Arnald&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>User(name = &#39;Arnald&#39;)
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/untitled2-3501.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-7887.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -105,22 +275,58 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/untitled3.html"><h3 class="article-title">Untitled3</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-8650.html"><h3 class="article-title">Ex-7-8650</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
+
+<div class="highlight"><pre><span></span><code><span class="c1">#creatd at 20250314</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/8.-coroutines</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Cororutine with Closing Behavior</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">closing_coroutine</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="k">yield</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;processing: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">GeneratorExit</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;coroutine closed&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span> <span class="o">=</span> <span class="n">closing_coroutine</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">next</span><span class="p">(</span><span class="n">coro</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nl">processing:</span><span class="w"> </span><span class="err">34</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>coroutine closed
+</code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/untitled3.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-8650.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -128,19 +334,45 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/untitled4.html"><h3 class="article-title">Untitled4</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-9691.html"><h3 class="article-title">Ex-7-9691</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250314</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/10.-mocking-in-unit-tests</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Mocking with side effects</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">unittest.mock</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mock</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">side_effect_func</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;processed :</span><span class="si">{</span><span class="n">arg</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">mock</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">(</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">side_effect_func</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mock</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">proc</span><span class="nv">essed</span><span class="w"> </span><span class="p">:</span><span class="nv">data</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/untitled4.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-9691.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -148,40 +380,56 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/validation.html"><h3 class="article-title">Validation</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-9820.html"><h3 class="article-title">Ex-7-9820</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250313</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">4.</span><span class="o">-</span><span class="n">descriptor</span><span class="o">-</span><span class="n">protocols</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/6.-dynamic-imports</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#descriptor with validation</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Dynamic import of Multiple modules in a loop</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PositiveNumber</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+</code></pre></div>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="n">_number</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Number must be positive&quot;</span><span class="p">)</span>
-        <span class="n">instance</span><span class="o">.</span><span class="n">_number</span> <span class="o">=</span> <span class="n">value</span>
+<div class="highlight"><pre><span></span><code><span class="n">modules</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;math&quot;</span> <span class="p">,</span> <span class="s2">&quot;random&quot;</span> <span class="p">,</span> <span class="s2">&quot;os&quot;</span><span class="p">]</span>
+</code></pre></div>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
-    <span class="n">number</span> <span class="o">=</span> <span class="n">PositiveNumber</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="n">imported_modules</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
 
-<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-<span class="n">obj …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">module_name</span> <span class="ow">in</span> <span class="n">modules</span><span class="p">:</span>
+    <span class="n">imported_modules</span><span class="p">[</span><span class="n">module_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">imported_modules</span><span class="p">[</span><span class="s2">&quot;math&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">4.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">imported_modules</span><span class="p">[</span><span class="s2">&quot;random&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">9</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/validation.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-9820.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -189,49 +437,108 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/yield.html"><h3 class="article-title">Yield</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-8.html"><h3 class="article-title">Ex-8</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#creatd at 20250314</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">8.</span><span class="o">-</span><span class="n">coroutines</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/7.-function-annotations</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multi_yield_coroutine</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;corotine started&quot;</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="k">yield</span> <span class="s2">&quot;First Field&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recieved: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">y</span><span class="o">=</span> <span class="k">yield</span> <span class="s2">&quot;Second Field&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recived: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">coro</span> <span class="o">=</span> <span class="n">multi_yield_coroutine</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">coro</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">coro</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">coro</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Annotation with Tuple</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">corotine</span><span class="w"> </span><span class="n">started</span>
-<span class="kr">First</span><span class="w"> </span><span class="n">Field</span>
-<span class="n">Recieved …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tuple</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_coordinates</span><span class="p">()</span> <span class="o">-&gt;</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span><span class="nb">float</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="mf">40.7128</span><span class="p">,</span><span class="o">-</span><span class="mf">74.0060</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">get_coordinates</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;function get_coordinates at 0x7dcb75973920&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/yield.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-8.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-8-1292.html"><h3 class="article-title">Ex-8-1292</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250313</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/6.-dynamic-imports</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Dynamic import and Method call using importlib</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">module_name</span> <span class="o">=</span> <span class="s2">&quot;os&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">method_name</span> <span class="o">=</span> <span class="s2">&quot;getcwd&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">module_name</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">module</span><span class="p">,</span> <span class="n">method_name</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">method</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>/home/arnald/tact/pyynotes/notebooks/python-basics/my-work/Dynamic_Imports
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-8-1292.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 14 of 14</h6>
+<h6 class="subheader">Page 14 of 26</h6>
 
 <p>
             <a href="https://Arnald-R.github.io/pyynotes/author/your-name13.html">&laquo; Prev</a>
 
+        <a href="https://Arnald-R.github.io/pyynotes/author/your-name15.html">Next &raquo;</a>
 </p>
 </div>
 
@@ -250,17 +557,29 @@
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
    
         </ul>
 

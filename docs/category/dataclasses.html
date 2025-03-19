@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Python Notes - Dataclasses</title>
+
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/pygments.css" />	
+    <script src="https://Arnald-R.github.io/pyynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://Arnald-R.github.io/pyynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-1-4293.html"><h3 class="article-title">Ex-1-4293</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250310</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Basic data classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">:</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">age</span> <span class="p">:</span> <span class="nb">int</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Arnald&quot;</span><span class="p">,</span><span class="n">age</span> <span class="o">=</span> <span class="mi">23</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Person(name=&#39;Arnald&#39;, age=23)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+            </article>
+
+
+                <hr  class="gradient"/>
+
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-10-6413.html"><h3 class="article-title">Ex-10-6413</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#using asdict and astuple</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">asdict</span><span class="p">,</span> <span class="n">astuple</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Employee</span><span class="p">:</span>
+    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">role</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">salery</span> <span class="p">:</span> <span class="nb">float</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span><span class="s2">&quot;Arnald&quot;</span><span class="p">,</span> <span class="n">role</span> <span class="o">=</span> <span class="s2">&quot;python-developer&quot;</span><span class="p">,</span> <span class="n">salery</span> <span class="o">=</span> <span class="mf">4000.00</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">asdict</span><span class="p">(</span><span class="n">employee</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;name&#39;: &#39;Arnald&#39;, &#39;role&#39;: &#39;python-developer&#39;, &#39;salery&#39;: 4000.0}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-10-6413.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-2-5982.html"><h3 class="article-title">Ex-2-5982</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250310</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Default values in the Dataclasses</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Book</span><span class="p">:</span>
+    <span class="n">Book_name</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">Author</span>    <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span>     <span class="p">:</span> <span class="nb">float</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">book</span> <span class="o">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">Book_name</span> <span class="o">=</span> <span class="s2">&quot;logic first&quot;</span><span class="p">,</span><span class="n">Author</span> <span class="o">=</span> <span class="s2">&quot;Dennis&quot;</span><span class="p">,</span> <span class="n">price</span> <span class="o">=</span> <span class="mf">99.9</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Book(Book_name=&#39;logic first&#39;, Author=&#39;Dennis&#39;, price=99.9 …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-2-5982.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-3-5239.html"><h3 class="article-title">Ex-3-5239</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250310</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Immutable Dataclasses</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span><span class="p">(</span><span class="n">frozen</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Point</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="nb">int</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">point</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
+
+<span class="c">NameError                                 Traceback (most recent call last)</span>
+
+<span class="c">Cell In</span><span class="k">[</span><span class="c">1</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 1</span>
+<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 1 point = Point(x = 3 …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-3-5239.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-4-9466.html"><h3 class="article-title">Ex-4-9466</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250310</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Post initialization processing</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="n">height</span> <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">width</span>  <span class="p">:</span> <span class="nb">float</span>
+    <span class="n">area</span>   <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">50</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">area</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">50</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score …</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-4-9466.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-5-1553.html"><h3 class="article-title">Ex-5-1553</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250310</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#comparing Data class Instance</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Item</span><span class="p">:</span>
+    <span class="n">name</span>  <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span> <span class="p">:</span> <span class="nb">float</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Mac&quot;</span><span class="p">,</span> <span class="n">Price</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">item1</span><span class="o">=</span> <span class="n">Item</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Mac&quot;</span><span class="p">,</span> <span class="n">Price</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">item</span> <span class="o">==</span> <span class="n">item1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="n">TypeError</span><span class="w">                                 </span><span class="n">Traceback</span><span class="w"> </span><span class="p">(</span><span class="n">most</span><span class="w"> </span><span class="n">recent</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="kr">last</span><span class="p">)</span>
+
+<span class="n">Cell</span><span class="w"> </span><span class="kr">In</span><span class="p">[</span><span class="mi">8 …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-5-1553.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-6-5115.html"><h3 class="article-title">Ex-6-5115</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Default factory for Mutable Fields</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span><span class="n">field</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ShippingCart</span><span class="p">:</span>
+    <span class="n">items</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span> <span class="o">=</span> <span class="nb">list</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cart</span> <span class="o">=</span> <span class="n">ShippingCart</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cart</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Apple&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">cart</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>ShippingCart(items=[&#39;Apple&#39;])
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-6-5115.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-7887.html"><h3 class="article-title">Ex-7-7887</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span>
+    <span class="n">work</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;search&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;User(name = &#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;)&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span><span class="s2">&quot;Arnald&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>User(name = &#39;Arnald&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-7887.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-8-9339.html"><h3 class="article-title">Ex-8-9339</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Data classes with Type hints</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Room</span><span class="p">:</span>
+    <span class="n">students</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">teacher</span> <span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">school</span> <span class="o">=</span> <span class="n">Room</span><span class="p">(</span><span class="n">students</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Arnald&quot;</span><span class="p">,</span><span class="s2">&quot;Anthony&quot;</span><span class="p">],</span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Praveen&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">school</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Room(students=[&#39;Arnald&#39;, &#39;Anthony&#39;], teacher=&#39;Praveen&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-8-9339.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-9-4903.html"><h3 class="article-title">Ex-9-4903</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/3.-data-classes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Inheriting from dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Animal</span><span class="p">:</span>
+    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="n">breed</span> <span class="p">:</span> <span class="nb">str</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span><span class="s2">&quot;greeda&quot;</span><span class="p">,</span> <span class="n">breed</span> <span class="o">=</span><span class="s2">&quot;puppy&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Dog(name=&#39;greeda&#39;, breed=&#39;puppy&#39;)
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-9-4903.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/archives.html">Archives</a>
+            <li><a href="https://Arnald-R.github.io/pyynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/Arnald-R/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Arnald</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

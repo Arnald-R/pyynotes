@@ -46,8 +46,8 @@
         
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/basic-2458.html"><h3 class="article-title">Basic-2458</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/basic-9192.html"><h3 class="article-title">Basic-9192</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
@@ -100,37 +100,42 @@ Getting value
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/read-only.html"><h3 class="article-title">Read-Only</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-1-7158.html"><h3 class="article-title">Ex-1-7158</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">4.</span><span class="o">-</span><span class="n">descriptor</span><span class="o">-</span><span class="n">protocols</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ReadOnlyDescriptor</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;This is a read-only attribute&quot;</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;Cannot modify read-only attribute&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#basic descriptor Example</span>
+</code></pre></div>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
-    <span class="n">read_only</span> <span class="o">=</span> <span class="n">ReadOnlyDescriptor</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span> <span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Getting value&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="n">_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;setting value&quot;</span><span class="p">)</span>
+        <span class="n">instance</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Myclass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="n">Descriptor</span><span class="p">()</span>
 
 <span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">read_only</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>This is a read-only …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a>
+<span class="n">obj</span><span class="o">.</span><span class="n">attribute</span> <span class="o">=</span> <span class="mi">43</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">attribute …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/read-only.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-1-7158.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -138,49 +143,370 @@ Getting value
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/validation.html"><h3 class="article-title">Validation</h3></a>
-<h6 class="subheader" title="2025-02-10T00:00:00-05:00">Mon 10 February 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-10-3597.html"><h3 class="article-title">Ex-10-3597</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">4.</span><span class="o">-</span><span class="n">descriptor</span><span class="o">-</span><span class="n">protocols</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#descriptor with validation</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Descriptor with property like behavior</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PositiveNumber</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Temperature</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">_celsius</span><span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span><span class="mi">32</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="n">_number</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Number must be positive&quot;</span><span class="p">)</span>
-        <span class="n">instance</span><span class="o">.</span><span class="n">_number</span> <span class="o">=</span> <span class="n">value</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
-    <span class="n">number</span> <span class="o">=</span> <span class="n">PositiveNumber</span><span class="p">()</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="n">instance</span><span class="o">.</span><span class="n">_celsius</span> <span class="o">=</span> <span class="n">value</span>
+</code></pre></div>
 
-<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-<span class="n">obj …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Weather</span><span class="p">:</span>
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">Temperature</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">weather</span> <span class="o">=</span> <span class="n">Weather</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">weather</span><span class="o">.</span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">weather</span><span class="o">.</span><span class="n">temperature</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">77 …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/validation.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-10-3597.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-2-3249.html"><h3 class="article-title">Ex-2-3249</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#read-only Descriptor</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ReadOnlyDescriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;This is an ReadOnlyDescriptor&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s2">&quot;cannot define read-only-attribute&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Myclass</span><span class="p">:</span>
+    <span class="n">read_only</span> <span class="o">=</span> <span class="n">ReadOnlyDescriptor</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">obj</span> <span class="o">=</span> <span class="n">Myclass</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">read_only</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>This is an ReadOnlyDescriptor
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5 …</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-2-3249.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-3-4227.html"><h3 class="article-title">Ex-3-4227</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Descriptor with validation</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">PositiveNumber</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">istance</span><span class="o">.</span><span class="n">_value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Number must be positive&quot;</span><span class="p">)</span>
+        <span class="n">instnace</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">PositiveNumber</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">number</span> <span class="o">=</span> <span class="mi">10 …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-3-4227.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-4-6324.html"><h3 class="article-title">Ex-4-6324</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Non data Descriptor</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">NonDataDescriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;NonDataDescriptor&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="n">NonDataDescriptor</span><span class="p">()</span> 
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">MyClass</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
+
+<span class="c">AttributeError                            Traceback (most recent call last)</span>
+
+<span class="c">Cell In</span><span class="k">[</span><span class="c">7</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 2</span>
+<span class="c">      1 obj = MyClass()</span>
+<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 2 print(obj</span><span class="nt">.</span><span class="c">MyClass …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-4-6324.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-5-8354.html"><h3 class="article-title">Ex-5-8354</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Descriptor in Class Variables</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Class-Level Descriptor&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="n">Descriptor</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Class-Level Descriptor
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-5-8354.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-6-6609.html"><h3 class="article-title">Ex-6-6609</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#combining __get__ and __set__</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;_value&quot;</span><span class="p">,</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;setting value to</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="s2">&quot;_value&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="n">Descriptor</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">obj …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-6-6609.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-7-3030.html"><h3 class="article-title">Ex-7-3030</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Tracking Access with a Descriptor</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TrackingDescriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">access_count</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Accessed </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">access_count</span><span class="si">}</span><span class="s2"> times&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">tracked</span> <span class="o">=</span> <span class="n">TrackingDescriptor</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">tracked</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Accessed 1 times …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-3030.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-8-7096.html"><h3 class="article-title">Ex-8-7096</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250311</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/4.-descriptor-protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Descriptor for multiple Attributes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ControlledAttribute</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">owner</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">instance</span><span class="p">,</span><span class="n">value</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;setting </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> to </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">instance</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__set_name__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">owner</span><span class="p">,</span><span class="n">name …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_Protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-8-7096.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 2</h6>
 
 <p>
 
+        <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols2.html">Next &raquo;</a>
 </p>
 </div>
 
@@ -199,17 +525,29 @@ Getting value
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
             <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
    
         </ul>
 

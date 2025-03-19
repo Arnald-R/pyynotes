@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Python Notes - Your Name</title>
+
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/pygments.css" />	
+    <script src="https://Arnald-R.github.io/pyynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://Arnald-R.github.io/pyynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/reg-expression4.html"><h3 class="article-title">Reg-Expression4</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250203</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="n">regular</span><span class="o">-</span><span class="n">expressions</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;123abc def 456&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Match digits</span>
+<span class="n">digits</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Digits:&quot;</span><span class="p">,</span> <span class="n">digits</span><span class="p">)</span>  <span class="c1"># Output: [&#39;123&#39;, &#39;456&#39;]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Digits: [&#39;123&#39;, &#39;456&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Match word characters (alphanumeric and underscore)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\w+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/reg-expression4.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/reg-expression6.html"><h3 class="article-title">Reg-Expression6</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250203</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="n">regular</span><span class="o">-</span><span class="n">expressions</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;hello world, hello&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Matches &#39;hello&#39; as a whole word</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\bhello\b&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matches</span><span class="p">)</span>  <span class="c1"># Output: [&#39;hello&#39;, &#39;hello&#39;]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[&#39;hello&#39;, &#39;hello&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello World&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Case-insensitive matching</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/reg-expression6.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/reg-expressiond.html"><h3 class="article-title">Reg-Expressiond</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250204</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="n">regular</span><span class="o">-</span><span class="n">expressions</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># re.match() example</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Match found:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No match&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Match found: hello
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># re.search() example</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;hello world …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/reg-expressiond.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/reserved-keywords.html"><h3 class="article-title">Reserved Keywords</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250118</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">09</span><span class="o">/</span><span class="n">reserved</span><span class="o">-</span><span class="n">keywords</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Reserved keywords</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#True and False</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span> <span class="mi">1</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="mi">15</span><span class="o">&gt;</span><span class="mi">16</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="mi">10</span><span class="o">&gt;=</span><span class="mi">8</span> <span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>True
+False
+True
+True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="mi">20</span><span class="o">&lt;</span><span class="mi">12</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="kc">False …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/reserved-keywords.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/simple.html"><h3 class="article-title">Simple</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">10.</span><span class="o">-</span><span class="n">mocking</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">unit</span><span class="o">-</span><span class="n">tests</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">unittest.mock</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mock</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">&quot;hello!&quot;</span>
+
+<span class="n">mock_greet</span> <span class="o">=</span> <span class="n">Mock</span><span class="p">(</span><span class="n">return_value</span> <span class="o">=</span> <span class="s2">&quot;Hi There&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mock_greet</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hi There
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/simple.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/simple-assignment.html"><h3 class="article-title">Simple-Assignment</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250121</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="n">assignment</span><span class="o">-</span><span class="n">operators</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="mi">21</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">31</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#right-operand  and left-operand</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">z</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">+=</span> <span class="n">y</span> <span class="c1">#20 +=5 =&gt;25</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of (x = x + y) = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Result of (x = x + y …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/simple-assignment.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/simple-assignment1.html"><h3 class="article-title">Simple-Assignment1</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250121</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="n">assignment</span><span class="o">-</span><span class="n">operators</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#division x /= y # It is equivalent to x = x / y. divide and assignment operator</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">z</span> <span class="o">=</span> <span class="mi">100</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">/=</span> <span class="n">y</span> <span class="c1"># 20/5=4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of (x = x / y) = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Result of (x = x …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/simple-assignment1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/simple-assignment2.html"><h3 class="article-title">Simple-Assignment2</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#createdat 20250121</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="n">assignment</span><span class="o">-</span><span class="n">operators</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># bitwise and x &amp;= y # It&#39;s equivalent to x = x &amp; y.</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">&amp;=</span> <span class="n">y</span><span class="c1">#=20&amp;5</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of (x = x &amp; y) = &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Result of (x = x &amp; y) =  20
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#bitwise or</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">y …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/simple-assignment2.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/simple-assignment3.html"><h3 class="article-title">Simple-Assignment3</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250121</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">scientecheasy</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2022</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="n">assignment</span><span class="o">-</span><span class="n">operators</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">python</span><span class="o">.</span><span class="n">html</span><span class="o">/</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">50</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="n">c</span> <span class="o">*=</span> <span class="mi">2</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">+</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">100</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">c</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of a: &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of b: &quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of c …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/simple-assignment3.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/string1.html"><h3 class="article-title">String1</h3></a>
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 220250127</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">py</span><span class="o">-</span><span class="n">notes</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#remove first and last charcter in string + python</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">remove_first_last_characters</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">string</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">original_string</span> <span class="o">=</span> <span class="s2">&quot;hello&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Example usage:</span>
+<span class="n">modified_string</span> <span class="o">=</span> <span class="n">remove_first_last_characters</span><span class="p">(</span><span class="n">original_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">modified_string</span><span class="p">)</span>  <span class="c1"># Output: &quot;ell&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/string1.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 23 of 26</h6>
+
+<p>
+            <a href="https://Arnald-R.github.io/pyynotes/author/your-name22.html">&laquo; Prev</a>
+
+        <a href="https://Arnald-R.github.io/pyynotes/author/your-name24.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/archives.html">Archives</a>
+            <li><a href="https://Arnald-R.github.io/pyynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/Arnald-R/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Arnald</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

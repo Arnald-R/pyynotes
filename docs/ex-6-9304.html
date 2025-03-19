@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Ex-6-9304</title>
+
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/pygments.css" />	
+    <script src="https://Arnald-R.github.io/pyynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://Arnald-R.github.io/pyynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://Arnald-R.github.io/pyynotes/ex-6-9304.html" rel="bookmark"
+        title="Permalink to Ex-6-9304">Ex-6-9304</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-03-19T00:00:00-04:00">Wed 19 March 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#creatd at 20250314</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/8.-coroutines</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Coroutine with Exception Handling</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">exception_handling_coroutine</span><span class="p">():</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="k">while</span> <span class="kc">True</span> <span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="k">yield</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;received :</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Caught exception: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span> <span class="o">=</span> <span class="n">exception_handling_coroutine</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">next</span><span class="p">(</span><span class="n">coro</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">received</span><span class="w"> </span><span class="o">:</span><span class="mi">10</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">coro</span><span class="o">.</span><span class="n">throw</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="s2">&quot;an error occured&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">/</span><span class="nx">tmp</span><span class="o">/</span><span class="nx">ipykernel_8692</span><span class="o">/</span><span class="mi">1015842093</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="nx">DeprecationWarning</span><span class="p">:</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="p">(</span><span class="k">type</span><span class="p">,</span><span class="w"> </span><span class="nx">exc</span><span class="p">,</span><span class="w"> </span><span class="nx">tb</span><span class="p">)</span><span class="w"> </span><span class="nx">signature</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">throw</span><span class="p">()</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="nx">deprecated</span><span class="p">,</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">single</span><span class="o">-</span><span class="nx">arg</span><span class="w"> </span><span class="nx">signature</span><span class="w"> </span><span class="nx">instead</span><span class="p">.</span>
+<span class="w">  </span><span class="nx">coro</span><span class="p">.</span><span class="nx">throw</span><span class="p">(</span><span class="nx">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;an error occured&quot;</span><span class="p">)</span>
+
+
+<span class="nx">Caught</span><span class="w"> </span><span class="nx">exception</span><span class="p">:</span><span class="w"> </span><span class="nx">an</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="nx">occured</span>
+
+
+
+<span class="o">---------------------------------------------------------------------------</span>
+
+<span class="nx">StopIteration</span><span class="w">                             </span><span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">)</span>
+
+<span class="nx">Cell</span><span class="w"> </span><span class="nx">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">----</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nx">coro</span><span class="p">.</span><span class="nx">throw</span><span class="p">(</span><span class="nx">ValueError</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;an error occured&quot;</span><span class="p">)</span>
+
+
+<span class="nx">StopIteration</span><span class="p">:</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/archives.html">Archives</a>
+            <li><a href="https://Arnald-R.github.io/pyynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/Arnald-R/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Arnald</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
