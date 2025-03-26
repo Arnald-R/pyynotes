@@ -48,25 +48,66 @@
         title="Permalink to Ex-5-2364">Ex-5-2364</a></h3>
     </header>
 
-<h6 class="subheader" title="2025-03-20T00:00:00-04:00">Thu 20 March 2025
+<h6 class="subheader" title="2025-03-26T00:00:00-04:00">Wed 26 March 2025
 </h6>
 
 
-    <div class="highlight"><pre><span></span><code><span class="c1">#created at 20250320</span>
+    <div class="highlight"><pre><span></span><code><span class="c1">#created at 20250314</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/17.-monkey-patching</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#https://stevejoe1412.gitbook.io/ssn/python-subtopics/10.-mocking-in-unit-tests</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="c1">#Mocking an object Attribute</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">unittest.mock</span><span class="w"> </span><span class="kn">import</span> <span class="n">patch</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="s2">&quot;original value&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">with</span> <span class="n">patch</span><span class="o">.</span><span class="n">object</span><span class="p">(</span><span class="n">MyClass</span><span class="p">,</span><span class="s2">&quot;Attribute&quot;</span><span class="p">,</span><span class="s2">&quot;Mocked value&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">MyClass</span><span class="o">.</span><span class="n">attribute</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>---------------------------------------------------------------------------
+
+AttributeError                            Traceback (most recent call last)
+
+Cell In[7], line 1
+----&gt; 1 with patch.object(MyClass,&quot;Attribute&quot;,&quot;Mocked value&quot;):
+      2     print(MyClass.attribute)
+
+
+File ~/miniconda3/envs/py312/lib/python3.12/unittest/mock.py:1467, in _patch.__enter__(self)
+   1463 if ((spec is not None or autospec is not None) and
+   1464     spec_set not in (True, None)):
+   1465     raise TypeError(&quot;Can&#39;t provide explicit spec_set <span class="gs">*and*</span> spec or autospec&quot;)
+-&gt; 1467 original, local = self.get_original()
+   1469 if new is DEFAULT and autospec is None:
+   1470     inherit = False
+
+
+File ~/miniconda3/envs/py312/lib/python3.12/unittest/mock.py:1437, in _patch.get_original(self)
+   1434     self.create = True
+   1436 if not self.create and original is DEFAULT:
+-&gt; 1437     raise AttributeError(
+   1438         &quot;%s does not have the attribute %r&quot; % (target, name)
+   1439     )
+   1440 return original, local
+
+
+AttributeError: &lt;class &#39;__main__.MyClass&#39;&gt; does not have the attribute &#39;Attribute&#39;
 </code></pre></div>
 
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 0</strong></p>
-<p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/monkey_patching.html">Monkey_Patching</a>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a>
 
 </p>
 
@@ -92,16 +133,20 @@
             <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/binary_data_handling.html">Binary_data_Handling</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_python_repl.html">Custom_Python_REPL</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day1.html">day1</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/global_interpreter_lock-gil.html">Global_Interpreter_Lock (GIL)</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
             <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>

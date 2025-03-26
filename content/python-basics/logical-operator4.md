@@ -1,6 +1,6 @@
 ---
 title: Logical-Operator4
-date: 2025-03-20
+date: 2025-03-26
 author: Your Name
 cell_count: 14
 score: 10
