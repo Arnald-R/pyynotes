@@ -1,6 +1,6 @@
 ---
 title: Bitwise-Operator3
-date: 2025-03-26
+date: 2025-04-21
 author: Your Name
 cell_count: 20
 score: 20
