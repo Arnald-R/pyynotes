@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Ex-14</title>
+
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://Arnald-R.github.io/pyynotes/theme/css/pygments.css" />	
+    <script src="https://Arnald-R.github.io/pyynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://Arnald-R.github.io/pyynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://Arnald-R.github.io/pyynotes/ex-14.html" rel="bookmark"
+        title="Permalink to Ex-14">Ex-14</a></h3>
+    </header>
+
+<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1">#created at 20250423</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Seaborn Visualization</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Seaborn Visualization === &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Seaborn Visualization ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Figure size 800x600 with 0 Axes&gt;
+
+
+
+
+&lt;Figure size 800x600 with 0 Axes&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;tips&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="nx">gaierror</span><span class="w">                                  </span><span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">)</span>
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1344</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">AbstractHTTPHandler</span><span class="p">.</span><span class="nx">do_open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">http_class</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">http_conn_args</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1343</span><span class="w"> </span><span class="nx">try</span><span class="p">:</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1344</span><span class="w">     </span><span class="nx">h</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">get_method</span><span class="p">(),</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">selector</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">1345</span><span class="w">               </span><span class="nx">encode_chunked</span><span class="p">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">has_header</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">Transfer</span><span class="o">-</span><span class="nx">encoding</span><span class="err">&#39;</span><span class="p">))</span>
+<span class="w">   </span><span class="mi">1346</span><span class="w"> </span><span class="nx">except</span><span class="w"> </span><span class="nx">OSError</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">err</span><span class="p">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">timeout</span><span class="w"> </span><span class="nx">error</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1336</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1335</span><span class="w"> </span><span class="s">&quot;&quot;&quot;Send a complete request to the server.&quot;&quot;&quot;</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1336</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_send_request</span><span class="p">(</span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1382</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">_send_request</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="p">,</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1381</span><span class="w">     </span><span class="nx">body</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">_encode</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">body</span><span class="err">&#39;</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1382</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">endheaders</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">=</span><span class="nx">encode_chunked</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1331</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">endheaders</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">message_body</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1330</span><span class="w">     </span><span class="nx">raise</span><span class="w"> </span><span class="nx">CannotSendHeader</span><span class="p">()</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1331</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_send_output</span><span class="p">(</span><span class="nx">message_body</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">=</span><span class="nx">encode_chunked</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1091</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">_send_output</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">message_body</span><span class="p">,</span><span class="w"> </span><span class="nx">encode_chunked</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1090</span><span class="w"> </span><span class="nx">del</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_buffer</span><span class="p">[:]</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1091</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1093</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">message_body</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">None</span><span class="p">:</span>
+<span class="w">   </span><span class="mi">1094</span><span class="w"> </span>
+<span class="w">   </span><span class="mi">1095</span><span class="w">     </span><span class="err">#</span><span class="w"> </span><span class="nx">create</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">consistent</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">message_body</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1035</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1034</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">auto_open</span><span class="p">:</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1035</span><span class="w">     </span><span class="kp">self</span><span class="p">.</span><span class="nx">connect</span><span class="p">()</span>
+<span class="w">   </span><span class="mi">1036</span><span class="w"> </span><span class="k">else</span><span class="p">:</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1470</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPSConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kp">self</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1468</span><span class="w"> </span><span class="s">&quot;Connect to a host on a given (SSL) port.&quot;</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1470</span><span class="w"> </span><span class="nx">super</span><span class="p">().</span><span class="nx">connect</span><span class="p">()</span>
+<span class="w">   </span><span class="mi">1472</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_tunnel_host</span><span class="p">:</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">http</span><span class="o">/</span><span class="nx">client</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1001</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPConnection</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="kp">self</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1000</span><span class="w"> </span><span class="nx">sys</span><span class="p">.</span><span class="nx">audit</span><span class="p">(</span><span class="s">&quot;http.client.connect&quot;</span><span class="p">,</span><span class="w"> </span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">host</span><span class="p">,</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">port</span><span class="p">)</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1001</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">sock</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_create_connection</span><span class="p">(</span>
+<span class="w">   </span><span class="mi">1002</span><span class="w">     </span><span class="p">(</span><span class="kp">self</span><span class="p">.</span><span class="nx">host</span><span class="p">,</span><span class="kp">self</span><span class="p">.</span><span class="nx">port</span><span class="p">),</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">timeout</span><span class="p">,</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">source_address</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1003</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">Might</span><span class="w"> </span><span class="nx">fail</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">OSs</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">don</span><span class="err">&#39;</span><span class="nx">t</span><span class="w"> </span><span class="nx">implement</span><span class="w"> </span><span class="nx">TCP_NODELAY</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">socket</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">841</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">create_connection</span><span class="p">(</span><span class="nx">address</span><span class="p">,</span><span class="w"> </span><span class="nx">timeout</span><span class="p">,</span><span class="w"> </span><span class="nx">source_address</span><span class="p">,</span><span class="w"> </span><span class="nx">all_errors</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">840</span><span class="w"> </span><span class="nx">exceptions</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">841</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">getaddrinfo</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nx">SOCK_STREAM</span><span class="p">):</span>
+<span class="w">    </span><span class="mi">842</span><span class="w">     </span><span class="nx">af</span><span class="p">,</span><span class="w"> </span><span class="nx">socktype</span><span class="p">,</span><span class="w"> </span><span class="nx">proto</span><span class="p">,</span><span class="w"> </span><span class="nx">canonname</span><span class="p">,</span><span class="w"> </span><span class="nx">sa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">res</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">socket</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">976</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">getaddrinfo</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">family</span><span class="p">,</span><span class="w"> </span><span class="k">type</span><span class="p">,</span><span class="w"> </span><span class="nx">proto</span><span class="p">,</span><span class="w"> </span><span class="nx">flags</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">975</span><span class="w"> </span><span class="nx">addrlist</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[]</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">976</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">_socket</span><span class="p">.</span><span class="nx">getaddrinfo</span><span class="p">(</span><span class="nx">host</span><span class="p">,</span><span class="w"> </span><span class="nx">port</span><span class="p">,</span><span class="w"> </span><span class="nx">family</span><span class="p">,</span><span class="w"> </span><span class="k">type</span><span class="p">,</span><span class="w"> </span><span class="nx">proto</span><span class="p">,</span><span class="w"> </span><span class="nx">flags</span><span class="p">):</span>
+<span class="w">    </span><span class="mi">977</span><span class="w">     </span><span class="nx">af</span><span class="p">,</span><span class="w"> </span><span class="nx">socktype</span><span class="p">,</span><span class="w"> </span><span class="nx">proto</span><span class="p">,</span><span class="w"> </span><span class="nx">canonname</span><span class="p">,</span><span class="w"> </span><span class="nx">sa</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">res</span>
+
+
+<span class="nx">gaierror</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nx">Errno</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="nx">Temporary</span><span class="w"> </span><span class="nx">failure</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="nx">resolution</span>
+
+
+<span class="nx">During</span><span class="w"> </span><span class="nx">handling</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">above</span><span class="w"> </span><span class="nx">exception</span><span class="p">,</span><span class="w"> </span><span class="nx">another</span><span class="w"> </span><span class="nx">exception</span><span class="w"> </span><span class="nx">occurred</span><span class="p">:</span>
+
+
+<span class="nx">URLError</span><span class="w">                                  </span><span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">)</span>
+
+<span class="nx">Cell</span><span class="w"> </span><span class="nx">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">1</span>
+<span class="o">----</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nx">tips</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">sns</span><span class="p">.</span><span class="nx">load_dataset</span><span class="p">(</span><span class="s">&quot;tips&quot;</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">seaborn</span><span class="o">/</span><span class="nx">utils</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">572</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">load_dataset</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">cache</span><span class="p">,</span><span class="w"> </span><span class="nx">data_home</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">kws</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">570</span><span class="w"> </span><span class="nx">cache_path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">get_data_home</span><span class="p">(</span><span class="nx">data_home</span><span class="p">),</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">basename</span><span class="p">(</span><span class="nx">url</span><span class="p">))</span>
+<span class="w">    </span><span class="mi">571</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">path</span><span class="p">.</span><span class="nx">exists</span><span class="p">(</span><span class="nx">cache_path</span><span class="p">):</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">572</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">get_dataset_names</span><span class="p">():</span>
+<span class="w">    </span><span class="mi">573</span><span class="w">         </span><span class="nx">raise</span><span class="w"> </span><span class="nx">ValueError</span><span class="p">(</span><span class="nx">f</span><span class="s">&quot;&#39;{name}&#39; is not one of the example datasets.&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">574</span><span class="w">     </span><span class="nx">urlretrieve</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">cache_path</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="o">/</span><span class="nx">seaborn</span><span class="o">/</span><span class="nx">utils</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">499</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">get_dataset_names</span><span class="p">()</span>
+<span class="w">    </span><span class="mi">493</span><span class="w"> </span><span class="nx">def</span><span class="w"> </span><span class="nx">get_dataset_names</span><span class="p">():</span>
+<span class="w">    </span><span class="mi">494</span><span class="w">     </span><span class="s">&quot;&quot;&quot;Report available example datasets, useful for reporting issues.</span>
+<span class="s">    495 </span>
+<span class="s">    496     Requires an internet connection.</span>
+<span class="s">    497 </span>
+<span class="s">    498     &quot;&quot;&quot;</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">499</span><span class="w">     </span><span class="nx">with</span><span class="w"> </span><span class="nx">urlopen</span><span class="p">(</span><span class="nx">DATASET_NAMES_URL</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">resp</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">500</span><span class="w">         </span><span class="nx">txt</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">read</span><span class="p">()</span>
+<span class="w">    </span><span class="mi">502</span><span class="w">     </span><span class="nx">dataset_names</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nx">name</span><span class="p">.</span><span class="nx">strip</span><span class="p">()</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">txt</span><span class="p">.</span><span class="nx">decode</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">)]</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">215</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">urlopen</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">timeout</span><span class="p">,</span><span class="w"> </span><span class="nx">cafile</span><span class="p">,</span><span class="w"> </span><span class="nx">capath</span><span class="p">,</span><span class="w"> </span><span class="nx">cadefault</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">213</span><span class="w"> </span><span class="k">else</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">214</span><span class="w">     </span><span class="nx">opener</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">_opener</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">215</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">opener</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">timeout</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">515</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">OpenerDirector</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">fullurl</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">timeout</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">512</span><span class="w">     </span><span class="nx">req</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">meth</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">514</span><span class="w"> </span><span class="nx">sys</span><span class="p">.</span><span class="nx">audit</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">urllib</span><span class="p">.</span><span class="nx">Request</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">full_url</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">get_method</span><span class="p">())</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">515</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_open</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">517</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">post</span><span class="o">-</span><span class="nx">process</span><span class="w"> </span><span class="nx">response</span>
+<span class="w">    </span><span class="mi">518</span><span class="w"> </span><span class="nx">meth_name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">protocol</span><span class="o">+</span><span class="s">&quot;_response&quot;</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">532</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">OpenerDirector</span><span class="p">.</span><span class="nx">_open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">529</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+<span class="w">    </span><span class="mi">531</span><span class="w"> </span><span class="nx">protocol</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="k">type</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">532</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">_call_chain</span><span class="p">(</span><span class="kp">self</span><span class="p">.</span><span class="nx">handle_open</span><span class="p">,</span><span class="w"> </span><span class="nx">protocol</span><span class="p">,</span><span class="w"> </span><span class="nx">protocol</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="mi">533</span><span class="w">                           </span><span class="err">&#39;</span><span class="nx">_open</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">534</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">result</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">535</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">492</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">OpenerDirector</span><span class="p">.</span><span class="nx">_call_chain</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">chain</span><span class="p">,</span><span class="w"> </span><span class="nx">kind</span><span class="p">,</span><span class="w"> </span><span class="nx">meth_name</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="nx">args</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">490</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">handler</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">handlers</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">491</span><span class="w">     </span><span class="nx">func</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">getattr</span><span class="p">(</span><span class="nx">handler</span><span class="p">,</span><span class="w"> </span><span class="nx">meth_name</span><span class="p">)</span>
+<span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="mi">492</span><span class="w">     </span><span class="nx">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">func</span><span class="p">(</span><span class="o">*</span><span class="nx">args</span><span class="p">)</span>
+<span class="w">    </span><span class="mi">493</span><span class="w">     </span><span class="k">if</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">None</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">494</span><span class="w">         </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1392</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">HTTPSHandler</span><span class="p">.</span><span class="nx">https_open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1391</span><span class="w"> </span><span class="nx">def</span><span class="w"> </span><span class="nx">https_open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">):</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1392</span><span class="w">     </span><span class="k">return</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">do_open</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">client</span><span class="p">.</span><span class="nx">HTTPSConnection</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">1393</span><span class="w">                         </span><span class="nx">context</span><span class="p">=</span><span class="kp">self</span><span class="p">.</span><span class="nx">_context</span><span class="p">)</span>
+
+
+<span class="nx">File</span><span class="w"> </span><span class="o">~/</span><span class="nx">miniconda3</span><span class="o">/</span><span class="nx">envs</span><span class="o">/</span><span class="nx">py312</span><span class="o">/</span><span class="nx">lib</span><span class="o">/</span><span class="nx">python3</span><span class="m m-Double">.12</span><span class="o">/</span><span class="nx">urllib</span><span class="o">/</span><span class="nx">request</span><span class="p">.</span><span class="nx">py</span><span class="p">:</span><span class="mi">1347</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">AbstractHTTPHandler</span><span class="p">.</span><span class="nx">do_open</span><span class="p">(</span><span class="kp">self</span><span class="p">,</span><span class="w"> </span><span class="nx">http_class</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="nx">http_conn_args</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1344</span><span class="w">         </span><span class="nx">h</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">get_method</span><span class="p">(),</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">selector</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headers</span><span class="p">,</span>
+<span class="w">   </span><span class="mi">1345</span><span class="w">                   </span><span class="nx">encode_chunked</span><span class="p">=</span><span class="nx">req</span><span class="p">.</span><span class="nx">has_header</span><span class="p">(</span><span class="err">&#39;</span><span class="nx">Transfer</span><span class="o">-</span><span class="nx">encoding</span><span class="err">&#39;</span><span class="p">))</span>
+<span class="w">   </span><span class="mi">1346</span><span class="w">     </span><span class="nx">except</span><span class="w"> </span><span class="nx">OSError</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">err</span><span class="p">:</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="nx">timeout</span><span class="w"> </span><span class="nx">error</span>
+<span class="o">-&gt;</span><span class="w"> </span><span class="mi">1347</span><span class="w">         </span><span class="nx">raise</span><span class="w"> </span><span class="nx">URLError</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">   </span><span class="mi">1348</span><span class="w">     </span><span class="nx">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">h</span><span class="p">.</span><span class="nx">getresponse</span><span class="p">()</span>
+<span class="w">   </span><span class="mi">1349</span><span class="w"> </span><span class="nx">except</span><span class="p">:</span>
+
+
+<span class="nx">URLError</span><span class="p">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">urlopen</span><span class="w"> </span><span class="nx">error</span><span class="w"> </span><span class="p">[</span><span class="nx">Errno</span><span class="w"> </span><span class="o">-</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="nx">Temporary</span><span class="w"> </span><span class="nx">failure</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="nx">resolution</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;total_bill&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;tip&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">---------------------------------------------------------------------------</span>
+
+<span class="c">NameError                                 Traceback (most recent call last)</span>
+
+<span class="c">Cell In</span><span class="k">[</span><span class="c">12</span><span class="k">]</span><span class="nt">,</span><span class="c"> line 1</span>
+<span class="nb">----</span><span class="nv">&gt;</span><span class="c"> 1 sns</span><span class="nt">.</span><span class="c">scatterplot(data=tips</span><span class="nt">,</span><span class="c"> x=&quot;total_bill&quot;</span><span class="nt">,</span><span class="c"> y=&quot;tip&quot;)</span>
+
+
+<span class="c">NameError: name &#39;tips&#39; is not defined</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Tips vs Total Bill&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Text(0.5, 1.0, &#39;Tips vs Total Bill&#39;)
+</code></pre></div>
+
+<p><img alt="png" src="/pyynotes/images/ex-14_9_1.png"></p>
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;seaborn_scatter.png&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;Figure size 640x480 with 0 Axes&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day7.html">day7</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/archives.html">Archives</a>
+            <li><a href="https://Arnald-R.github.io/pyynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abc.html">ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/abstract_base_class-abc.html">Abstract_Base_Class-ABC</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/asynchronous_programming.html">Asynchronous_Programming</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/basics.html">basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/binary_data_handling.html">Binary_data_Handling</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/corotines.html">Corotines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/coroutines.html">Coroutines</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_exception.html">Custom_Exception</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/custom_python_repl.html">Custom_Python_REPL</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclass.html">Dataclass</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dataclasses.html">Dataclasses</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day1.html">day1</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day2.html">day2</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day3.html">day3</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day4.html">day4</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day5.html">day5</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day6.html">day6</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day7.html">day7</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamic_imports.html">Dynamic_Imports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/dynamicimports.html">DynamicImports</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/function_annotations.html">Function_Annotations</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/global_interpreter_lock-gil.html">Global_Interpreter_Lock (GIL)</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/langchain.html">Langchain</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_in_unit_test.html">Mocking_in_Unit_Test</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/mocking_unittests.html">Mocking_Unittests</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/monkey_patching.html">Monkey_Patching</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlib_module.html">Pathlib_module</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pathlibmodule.html">PathlibModule</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/pep-8-compliance.html">PEP 8 compliance</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-basics.html">python-basics</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/python-c-extension.html">Python-C-Extension</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/slot_classes.html">slot_classes</a></li>
+            <li><a href="https://Arnald-R.github.io/pyynotes/category/typing_module.html">Typing_Module</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/Arnald-R/">GitHub</a></li>
+            <li><a href="<linkedin handle>">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Arnald</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
