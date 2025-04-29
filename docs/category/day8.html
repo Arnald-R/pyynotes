@@ -46,8 +46,8 @@
         
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-1-7739.html"><h3 class="article-title">Ex-1-7739</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-1-1374.html"><h3 class="article-title">Ex-1-1374</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -102,8 +102,198 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-2-5107.html"><h3 class="article-title">Ex-2-5107</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-10-9010.html"><h3 class="article-title">Ex-10-9010</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250426</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Lookahead and Lookbehind</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Lookahead and Lookbehind ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Lookahead and Lookbehind ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Price: $100, Cost: $200&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Find numbers after &#39;$&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">prices</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(?&lt;=\$)\d+&#39;</span> <span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;prices:</span><span class="si">{</span><span class="n">prices</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>prices:[&#39;100&#39;, &#39;200&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-10-9010.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-11-6200.html"><h3 class="article-title">Ex-11-6200</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250426</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#String validation</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === String Validation ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === String Validation ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^[\W\.-]+@[\W\.-]+\.\W+$&#39;</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">email</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;is valid mail:</span><span class="si">{</span><span class="n">validate_email</span><span class="p">(</span><span class="s1">&#39;test@example.com&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>is valid mail:False
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;is valid mail:</span><span class="si">{</span><span class="n">validate_email</span><span class="p">(</span><span class="s1">&#39;arnald@gmail.com&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>is …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-11-6200.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-12-6089.html"><h3 class="article-title">Ex-12-6089</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250426</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Complex Pattern Matching</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Complex pattern Matching ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Complex pattern Matching ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;div class=&quot;content&quot;&gt;</span>
+<span class="s2">    &lt;p&gt;Some text here &lt;/p&gt;</span>
+<span class="s2">    &lt;p&gt;More text here &lt;/p&gt;</span>
+<span class="s2">&lt;/div&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">paragraphs</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&lt;p&gt;(.*?)&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found paragraphs :</span><span class="si">{</span><span class="n">paragraphs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>found paragraphs :[&#39;Some text here &#39;, &#39;More text …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-12-6089.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-13-8952.html"><h3 class="article-title">Ex-13-8952</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250428</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Phone Number Formatting</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Phone number Formatting ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Phone number Formatting ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">format_phone</span><span class="p">(</span><span class="n">phone</span><span class="p">):</span>
+    <span class="c1">#Remove all non-digits </span>
+    <span class="n">digits</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\D&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">phone</span><span class="p">)</span>
+    <span class="c1">#Format as XXX-XXX-XXXX</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\d</span><span class="si">{3}</span><span class="s1">)(\d</span><span class="si">{3}</span><span class="s1">)(\d</span><span class="si">{4}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;\1-\2-\3&#39;</span><span class="p">,</span> <span class="n">digits</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;formatted phone …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-13-8952.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-2-4045.html"><h3 class="article-title">Ex-2-4045</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -136,7 +326,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-2-5107.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-2-4045.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -144,8 +334,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-3-4322.html"><h3 class="article-title">Ex-3-4322</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-3-7235.html"><h3 class="article-title">Ex-3-7235</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -184,7 +374,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-3-4322.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-3-7235.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -192,8 +382,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-4-9672.html"><h3 class="article-title">Ex-4-9672</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-4-2180.html"><h3 class="article-title">Ex-4-2180</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -227,7 +417,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-4-9672.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-4-2180.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -235,8 +425,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-5-4343.html"><h3 class="article-title">Ex-5-4343</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-5-7128.html"><h3 class="article-title">Ex-5-7128</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -277,7 +467,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-5-4343.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-5-7128.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -285,8 +475,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-6-6759.html"><h3 class="article-title">Ex-6-6759</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-6-6302.html"><h3 class="article-title">Ex-6-6302</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -321,136 +511,17 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-6-6759.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-7-8398.html"><h3 class="article-title">Ex-7-8398</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250425</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Word Boundary Matching</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Word Boundary matchig ===&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> === Word Boundary matchig ===
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Find the word &#39;cat&#39; in &#39;category&#39; and &#39;cat&#39;&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\bcat\b&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cat in:</span><span class="si">{</span><span class="n">matches</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>cat in:[&#39;cat&#39;, &#39;cat&#39;]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-7-8398.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-8-4105.html"><h3 class="article-title">Ex-8-4105</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250426</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#URL pattern matching</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === URL pattern Matching ===&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> === URL pattern Matching ===
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Visit our website at https://www.example.com or http://test.com&quot;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">urls</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;https?://[\W\.-]+\.\W+&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found urls:</span><span class="si">{</span><span class="n">urls</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>found urls:[]
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-8-4105.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-9-8150.html"><h3 class="article-title">Ex-9-8150</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day8.html">day8</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-9-8150.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-6-6302.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
+<h6 class="subheader">Page 1 of 2</h6>
 
 <p>
 
+        <a href="https://Arnald-R.github.io/pyynotes/category/day82.html">Next &raquo;</a>
 </p>
 </div>
 

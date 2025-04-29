@@ -1,6 +1,6 @@
 ---
 title: Simple-Assignment2
-date: 2025-04-26
+date: 2025-04-29
 author: Your Name
 cell_count: 34
 score: 30

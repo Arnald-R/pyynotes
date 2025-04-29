@@ -47,8 +47,86 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/basic-4764.html"><h3 class="article-title">Basic-4764</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/basic-3737.html"><h3 class="article-title">Basic-3737</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">6.</span><span class="o">-</span><span class="n">dynamic</span><span class="o">-</span><span class="n">imports</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello, Alice!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-3737.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/basic-6515.html"><h3 class="article-title">Basic-6515</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">4.</span><span class="o">-</span><span class="n">descriptor</span><span class="o">-</span><span class="n">protocols</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Basic Descriptor example</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> <span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Getting value&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="n">_value</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;setting value&quot;</span><span class="p">)</span>
+        <span class="n">instance</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span> 
+ <span class="k">class</span><span class="w"> </span><span class="nc">Myclass</span><span class="p">:</span>
+    <span class="n">attribute</span> <span class="o">=</span> <span class="n">Descriptor</span><span class="p">()</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<span class="n">obj</span><span class="o">.</span><span class="n">attribute</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-6515.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/basic-7191.html"><h3 class="article-title">Basic-7191</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -83,7 +161,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-4764.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-7191.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -91,48 +169,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/basic-5490.html"><h3 class="article-title">Basic-5490</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">4.</span><span class="o">-</span><span class="n">descriptor</span><span class="o">-</span><span class="n">protocols</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Basic Descriptor example</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> <span class="k">class</span><span class="w"> </span><span class="nc">Descriptor</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__get__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Getting value&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">instance</span><span class="o">.</span><span class="n">_value</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__set__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">,</span> <span class="n">owner</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;setting value&quot;</span><span class="p">)</span>
-        <span class="n">instance</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="n">value</span> 
- <span class="k">class</span><span class="w"> </span><span class="nc">Myclass</span><span class="p">:</span>
-    <span class="n">attribute</span> <span class="o">=</span> <span class="n">Descriptor</span><span class="p">()</span>
-
-<span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
-<span class="n">obj</span><span class="o">.</span><span class="n">attribute</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/descriptor_protocols.html">Descriptor_protocols</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-5490.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/basic-5749.html"><h3 class="article-title">Basic-5749</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/basic-8136.html"><h3 class="article-title">Basic-8136</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -178,45 +216,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-5749.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/basic-8109.html"><h3 class="article-title">Basic-8109</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250210</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">stevejoe1412</span><span class="o">.</span><span class="n">gitbook</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ssn</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="n">subtopics</span><span class="o">/</span><span class="mf">6.</span><span class="o">-</span><span class="n">dynamic</span><span class="o">-</span><span class="n">imports</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>Hello, Alice!
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/functionannotation.html">FunctionAnnotation</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-8109.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/basic-8136.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -225,7 +225,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/basicdataclass.html"><h3 class="article-title">Basicdataclass</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -268,7 +268,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/basics.html"><h3 class="article-title">Basics</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -307,7 +307,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/bitwise-operator.html"><h3 class="article-title">Bitwise-Operator</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -362,7 +362,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/bitwise-operator2.html"><h3 class="article-title">Bitwise-Operator2</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -418,7 +418,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/bitwise-operator3.html"><h3 class="article-title">Bitwise-Operator3</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -473,7 +473,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/bitwise-operator4.html"><h3 class="article-title">Bitwise-Operator4</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -525,7 +525,7 @@
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 2 of 45</h6>
+<h6 class="subheader">Page 2 of 47</h6>
 
 <p>
             <a href="https://Arnald-R.github.io/pyynotes/author/your-name.html">&laquo; Prev</a>

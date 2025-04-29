@@ -47,8 +47,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-16-6421.html"><h3 class="article-title">Ex-16-6421</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-1109.html"><h3 class="article-title">Ex-16-1109</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -92,7 +92,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-6421.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-1109.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -100,8 +100,100 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-16-6479.html"><h3 class="article-title">Ex-16-6479</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-1837.html"><h3 class="article-title">Ex-16-1837</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250403</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Directory Operations</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Directory Operations ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Directory Operations ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">directory_ops</span><span class="p">():</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;test_dir&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#creating directory</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directory contents:</span><span class="si">{</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="c1">#listingthe directory contents</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s1">&#39;test_dir&#39;</span><span class="p">)</span> <span class="c1">#Removing dir</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">directory_ops</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Directory contents:[&#39;binary.dat&#39;, &#39;ex-11.ipynb&#39;, &#39;ex-16.ipynb&#39;, &#39;ex-13.ipynb&#39;, &#39;ex-15.ipynb&#39;, &#39;ex-18 …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day5.html">day5</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-1837.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-2193.html"><h3 class="article-title">Ex-16-2193</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250331</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Loop with List comprehensions</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Loop with List comrehensions === &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">num</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">num</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;squares of even numbers:</span><span class="si">{</span><span class="n">squares</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>squares of even numbers:[4, 16]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day3.html">day3</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-2193.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-4302.html"><h3 class="article-title">Ex-16-4302</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -138,7 +230,102 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-6479.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-4302.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-8117.html"><h3 class="article-title">Ex-16-8117</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250415</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Private Methods </span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Private Methods === &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Private Methods ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">processor</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">processed_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__clean_data</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__format_data</span><span class="p">(</span><span class="n">processed_data</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__clean_data</span><span class="p">(</span><span class="n">Self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__format_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">proc</span> <span class="o">=</span> <span class="n">processor</span><span class="p">(</span><span class="s2">&quot;Heloo World &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day6.html">day6</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-8117.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://Arnald-R.github.io/pyynotes/ex-16-8345.html"><h3 class="article-title">Ex-16-8345</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250327</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#Advanced List Methods</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Advanced List Methods ===&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code> === Advanced List Methods ===
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;numbers after sort:</span><span class="si">{</span><span class="n">numbers</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>numbers after sort:[1, 2, 2, 3, 4, 4, 6, 7, 9]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">numbers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;numbers after …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day2.html">day2</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-16-8345.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -147,7 +334,7 @@
 
             <article>
                 <a href="https://Arnald-R.github.io/pyynotes/ex-17.html"><h3 class="article-title">Ex-17</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -193,45 +380,40 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-1004.html"><h3 class="article-title">Ex-17-1004</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-17-2045.html"><h3 class="article-title">Ex-17-2045</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250326</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250331</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Comments Demo</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#While loop with Try-Except</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Comments Demo === &quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === While loop with try Except ===&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code> === Comments Demo ===
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="k">While</span><span class="w"> </span><span class="k">loop</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">try</span><span class="w"> </span><span class="nv">Except</span><span class="w"> </span><span class="o">===</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Single line comment</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span> <span class="c1">#End of line comment</span>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number(0 to exit)&quot;</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;you entered :</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;please enter a valid number&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>Hello
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">This is a</span>
-<span class="sd">multi-line</span>
-<span class="sd">comment</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day1.html">day1</a>
+<div class="highlight"><pre><span></span><code><span class="nv">Enter</span><span class="w"> </span><span class="nv">a …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day3.html">day3</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-1004.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-2045.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -239,142 +421,8 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-1652.html"><h3 class="article-title">Ex-17-1652</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250327</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Set Methods</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Set Methods ===&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> === Set Methods ===
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">set_a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">set_b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">}</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">set_a</span><span class="o">.</span><span class="n">update</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After the update:</span><span class="si">{</span><span class="n">set_a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>After the update:{1, 2, 3, 6, 7, 8}
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">set_a</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;After discard:</span><span class="si">{</span><span class="n">set_a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>After discard:{1 …</code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day2.html">day2</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-1652.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-3016.html"><h3 class="article-title">Ex-17-3016</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250403</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Context Manager Exception</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Context Manager Exception ===&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> === Context Manager Exception ===
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">FileManager</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">filename</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file</span>     <span class="o">=</span> <span class="kc">None</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span>
-
-    <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_val</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">close …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day5.html">day5</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-3016.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-4577.html"><h3 class="article-title">Ex-17-4577</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250415</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Multiple Constructors</span>
-</code></pre></div>
-
-<p>print("\n === Multiple Constructors ===")</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Time</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">minutes</span> <span class="o">=</span> <span class="n">minutes</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">time_str</span><span class="p">):</span>
-        <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="n">time_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">)</span>
-
-    <span class="nd">@classmethod</span> 
-    <span class="k">def</span><span class="w"> </span><span class="nf">from_minutes</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
-        <span class="n">hours</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">//</span> <span class="mi">60</span>
-        <span class="n">mins</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">%</span> <span class="mi">60</span>
-        <span class="k">return</span> <span class="bp">cls …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day6.html">day6</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-4577.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-9680.html"><h3 class="article-title">Ex-17-9680</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-17-2137.html"><h3 class="article-title">Ex-17-2137</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
@@ -414,7 +462,7 @@
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-9680.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-2137.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
@@ -422,87 +470,45 @@
 
 
             <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-17-9826.html"><h3 class="article-title">Ex-17-9826</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
+                <a href="https://Arnald-R.github.io/pyynotes/ex-17-6250.html"><h3 class="article-title">Ex-17-6250</h3></a>
+<h6 class="subheader" title="2025-04-29T00:00:00-04:00">Tue 29 April 2025
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250331</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250415</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="c1">#While loop with Try-Except</span>
+<div class="highlight"><pre><span></span><code><span class="c1">#Multiple Constructors</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === While loop with try Except ===&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p>print("\n === Multiple Constructors ===")</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Time</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">minutes</span> <span class="o">=</span> <span class="n">minutes</span>
 
-<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="k">While</span><span class="w"> </span><span class="k">loop</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">try</span><span class="w"> </span><span class="nv">Except</span><span class="w"> </span><span class="o">===</span>
-</code></pre></div>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_string</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">time_str</span><span class="p">):</span>
+        <span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="n">time_str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">minutes</span><span class="p">)</span>
 
-<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number(0 to exit)&quot;</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;you entered :</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;please enter a valid number&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nv">Enter</span><span class="w"> </span><span class="nv">a …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day3.html">day3</a>
+    <span class="nd">@classmethod</span> 
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_minutes</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">minutes</span><span class="p">):</span>
+        <span class="n">hours</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">//</span> <span class="mi">60</span>
+        <span class="n">mins</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">%</span> <span class="mi">60</span>
+        <span class="k">return</span> <span class="bp">cls …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day6.html">day6</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-9826.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://Arnald-R.github.io/pyynotes/ex-18.html"><h3 class="article-title">Ex-18</h3></a>
-<h6 class="subheader" title="2025-04-26T00:00:00-04:00">Sat 26 April 2025
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1">#created at 20250423</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1">#Time series with pandas</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> === Time series with pandas ===&quot;</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code> === Time series with pandas ===
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s1">&#39;20240423&#39;</span><span class="p">,</span> <span class="n">periods</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;ABCD&#39;</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Series Datframe:</span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">df …</span></code></pre></div><p class="subheader">Category: <a href="https://Arnald-R.github.io/pyynotes/category/day7.html">day7</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-18.html">Read More</a>
+                <a class="button radius secondary small right" href="https://Arnald-R.github.io/pyynotes/ex-17-6250.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
             <!-- /#posts-list -->
 <div class="pagination-centered">
-<h6 class="subheader">Page 14 of 45</h6>
+<h6 class="subheader">Page 14 of 47</h6>
 
 <p>
             <a href="https://Arnald-R.github.io/pyynotes/author/your-name13.html">&laquo; Prev</a>
